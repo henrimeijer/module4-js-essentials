@@ -1,0 +1,280 @@
+/* CSS for background image and overlay */
+
+.hero {
+  height: calc(100vh - 80px);
+  background-image: url('./img/pexels-kostiantyn-zavhorodnii-637657209-37043728.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: block;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  text-align: left;
+  padding-top: 160px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position:relative;
+  z-index: 1;
+  /* max-width: 600px; */
+  align-self: flex-start;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;      /* centers it horizontally */
+  padding: 0 24px;     /* spacing on small screens */
+}
+
+.team {
+  margin-top: 60px;
+}
+
+.team-title {
+  margin-bottom: 30px;
+}
+
+.team-members {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.team-card {
+  flex: 1;
+  max-width: 250px;
+  text-align: center;
+  background: rgba(65, 65, 65, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.team-card .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.team-card button {
+  margin-top: 10px;
+  background-color: #333;
+  border-radius: 20px;
+}
+
+/* Basic CSS for the navigation bar */
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  nav {
+      background-color: #0c3559;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 15px; /* cleaner spacing than margin-right */
+    /* padding: 0; */
+  }
+
+  nav ul li {
+    display: flex;
+    align-items: center;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  nav h1 {
+    color: #ffffff;
+    margin-top: 5px;
+  }
+
+  /* Basic CSS for the form elements */
+
+  body {
+    font-family: Arial, sans-serif;
+    /* margin: 20px; */
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  div {
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: inline-block;
+    width: 100px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 200px;
+    padding: 5px;
+  }
+
+  button {
+    padding: 7px 15px;
+    background-color: #0c3559;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #124b7d;
+  }
+
+  /* Basic CSS for the report section */
+
+  h2 {
+    margin-top: 30px;
+  }
+
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  #report {
+    padding: 10px;
+    max-width: 400px;
+    word-wrap: break-word;
+  }
+
+  #result {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    flex-wrap: wrap;        /* allows multiple cards */
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  #result img{
+    width: 200px;
+    height: 100px;
+  }
+
+/* CSS for navigation search and buttons */
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 999px;
+  padding: 8px 12px;
+  width: 380px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.2);
+  transition: box-shadow 0.2s ease;
+}
+
+#searchInput {
+  border: none;
+  outline: none;
+  height: 35px;
+  flex: 1;
+  padding-right: 120px;
+  padding-left: 10px;
+}
+
+#btnSearch,
+#btnClear {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 28px;
+  font-size: 12px;
+  border-radius: 999px;
+}
+
+#btnSearch {
+  right: 80px;
+}
+
+#btnClear {
+  right: 15px;
+}
+
+/* CSS for the form */
+
+.contact-form {
+  max-width: 400px;
+  padding: 60px;
+  background: rgba(99, 99, 99, 0.9);
+  border-radius: 12px;
+}
+
+.contact-form label {
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+.result-card {
+  background: rgba(255, 255, 255, 0.9); /* same as team-card */
+  color: rgb(58, 58, 58);
+  padding: 10px;
+  border-radius: 12px;
+  /* max-width: 400px; */
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-5px);
+}
+
+.result-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover; /* prevents stretching */
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.result-card h2 {
+  margin-bottom: 10px;
+}
+
+.result-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.result-card small {
+  display: inline-block;
+  background: #0c3559;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
